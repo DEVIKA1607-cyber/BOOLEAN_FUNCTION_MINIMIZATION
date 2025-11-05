@@ -19,44 +19,53 @@ Hardware – PCs, Cyclone II , USB flasher
 **Logic Diagram**
 
 **Procedure**
+ 1. Type the program in Quartus software.
+ 2. Compile and run the program.
+ 3. Generate the RTL schematic and save the logic diagram.
+ 4. Create nodes for inputs and outputs to generate the timing diagram.
+ 5. For different input combinations generate the timing diagram.
 
 1.	Type the program in Quartus software.
+2.	
 
-2.	Compile and run the program.
+3.	Compile and run the program.
 
-3.	Generate the RTL schematic and save the logic diagram.
+4.	Generate the RTL schematic and save the logic diagram.
 
-4.	Create nodes for inputs and outputs to generate the timing diagram.
+5.	Create nodes for inputs and outputs to generate the timing diagram.
 
-5.	For different input combinations generate the timing diagram.
+6.	For different input combinations generate the timing diagram.
 
 
 **Program:**
-```
-Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-Developed by: D.DEVIKA
-RegisterNumber:24002534
-```
-```
-module exp2(a,b,c,d,f1,w,x,y,z,f2);
-input a,b,c,d,w,x,y,z;
-output f1,f2;
-assign f1=((~b&~d)|(~a&b&d)|(a&b&~c));
-assign f2=((~y&z)|(x&y)|(w&y));
-endmodule
-```
 
+~~~
 
+Developed by: D DEVIKA 
+RegisterNumber:212224100010
+ i) module funct1(a,b,c,d,f1);
+ input a,b,c,d;
+ output f1;
+ assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
+ endmodule
+ ii) module funct2(w,x,y,z,f2);
+ input w,x,y,z;
+ output f2;
+ assign f2=((~y & z)|( w & y )|(x & y));
+ endmodule
+
+~~~
 **RTL realization**
-![exp2 (2)](https://github.com/user-attachments/assets/85e167bd-d1ee-41e9-946a-50e1345f25ef)
+<img width="779" height="443" alt="image" src="https://github.com/user-attachments/assets/acc650c2-1fcd-4ae3-8c60-dbde71314d60" />
+<img width="804" height="432" alt="image" src="https://github.com/user-attachments/assets/c0495507-aa1c-4440-bc24-e6b0c0e2978a" />
 
-**Output:**
 
-**RTL**
+
 
 **Timing Diagram**
+<img width="805" height="426" alt="image" src="https://github.com/user-attachments/assets/9a744f3f-f912-46bd-8876-6c085d56cec8" />
+<img width="825" height="260" alt="image" src="https://github.com/user-attachments/assets/7750d4fa-5789-4b6a-ae8b-145c7fa94291" />
 
-![exp2](https://github.com/user-attachments/assets/ec4fa345-a456-4484-95a0-19ba37014fd2)
 
 **Result:**
 
